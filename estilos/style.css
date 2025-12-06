@@ -13,28 +13,6 @@
     margin: 0;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-::selection {
-
-}
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
@@ -117,4 +95,61 @@ main section#ficha div#social a {
 
 main section#ficha div#social a:hover {
     color: var(--destaque-inverso);
+}
+
+main section#detalhes {
+    grid-column: 2;
+}
+
+main section#detalhes h2 {
+    color: var(--destaque);
+}
+
+main section#detalhes article {
+    background-color: var(--fundo-card);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+main section#detalhes article#skills div#skill-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+main section#detalhes article#skills div#skill-container .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section#detalhes article#skills div#skill-container .nome {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+main section#detalhes article#skills div#skill-container .porcent {
+    font-weight: bold;
+    color: var(--destaque);
+}
+
+main section#detalhes article#skills div#skill-container .barra {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--fundo-principal);
+}
+
+main section#detalhes article#skills div#skill-container .progresso {
+    height: 100%;
+    background-color: var(--destaque-inverso);
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    main section#detalhes article#skills div#skill-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
