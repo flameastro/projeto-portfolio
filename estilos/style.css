@@ -71,3 +71,50 @@ header nav#menu ul a:hover {
     background-color: var(--destaque-inverso);
     color: var(--destaque);
 }
+
+main {
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+main section#ficha {
+    background-color: var(--fundo-card);
+    padding: 20px;
+    border-radius: 8px;
+    grid-column: 2;
+}
+
+main section#ficha img.foto {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 5px solid var(--fundo-card);
+    outline: 5px solid var(--destaque);
+}
+
+main section#ficha h1 {
+    color: var(--destaque);
+    margin: 15px 0;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+main section#ficha div#social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    margin-top: 15px;
+    gap: 1em;
+}
+
+main section#ficha div#social a {
+    color: var(--destaque);
+    transition: all 0.5s ease-in-out;
+}
+
+main section#ficha div#social a:hover {
+    color: var(--destaque-inverso);
+}
